@@ -46,6 +46,10 @@ public class MenuController {
 
   @DeleteMapping("/menus/{id}")
   public void deleteMenu(@PathVariable Long id) {
-    menuRepository.deleteById(id);
+
+    if (menuRepository.existsById(id))
+      menuRepository.deleteById(id);
+    else
+      throw new MenuNotFoundException(id);
   }
 }

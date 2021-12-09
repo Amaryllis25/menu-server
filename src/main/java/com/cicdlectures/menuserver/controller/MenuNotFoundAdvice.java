@@ -1,7 +1,5 @@
 package com.cicdlectures.menuserver.controller;
 
-import com.cicdlectures.menuserver.controller.MenuNotFoundException;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
