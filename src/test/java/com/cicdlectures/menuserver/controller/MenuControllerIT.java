@@ -77,13 +77,15 @@ public class MenuControllerIT {
         assertEquals(HttpStatus.OK, response.getStatusCode());
           
         // On défini wantMenus, les résultats attendus
-        MenuDto wantMenus = new MenuDto(
-            null,
-            "menuNoel",
-            new HashSet<>(
-                Arrays.asList(
-                    new DishDto(null, "moules_frites"),
-                    new DishDto(null, "les_13_desserts_de_noel")
+        List<MenuDto> wantMenus = Arrays.asList(
+            new MenuDto(
+                Long.valueOf(1),
+                "menuNoel",
+                new HashSet<>(
+                    Arrays.asList(
+                        new DishDto(Long.valueOf(1), "moules_frites"),
+                        new DishDto(Long.valueOf(2), "les_13_desserts_de_noel")
+                    )
                 )
             )
         );
