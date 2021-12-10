@@ -71,7 +71,7 @@ public class MenuControllerIT {
         ResponseEntity<MenuDto[]> response = this.template.getForEntity(getMenusURL().toString(), MenuDto[].class);
   
         //Parse le payload de la réponse sous forme d'array de MenuDto
-        MenuDto[] gotMenus = response.getBody();
+        List<MenuDto> gotMenus = Arrays.asList(response.getBody());
           
         // Verifie que le status de la réponse est 200
         assertEquals(HttpStatus.OK, response.getStatusCode());
