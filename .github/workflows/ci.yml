@@ -20,3 +20,11 @@ jobs:
         with:
           name: menu-server
           path: ./target/menu-server.jar
+  tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: mvn test
+      - run: mvn clean verify
+
+

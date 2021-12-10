@@ -55,12 +55,12 @@ public class MenuControllerIT {
     public void listsAllMenus() throws Exception {
 
         Menu menu = new Menu(
-            Long.valueOf(1),
+            null,
             "menuNoel", 
             new HashSet<>(
                 Arrays.asList(
-                    new Dish(Long.valueOf(1), "moules_frites", null),
-                    new Dish(Long.valueOf(2), "les_13_desserts_de_noel", null)
+                    new Dish(null, "moules_frites", null),
+                    new Dish(null, "les_13_desserts_de_noel", null)
                 )
             )
         );
@@ -78,12 +78,12 @@ public class MenuControllerIT {
           
         // On défini wantMenus, les résultats attendus
         MenuDto wantMenus = new MenuDto(
-            Long.valueOf(1),
+            null,
             "menuNoel",
             new HashSet<>(
                 Arrays.asList(
-                    new DishDto(Long.valueOf(1), "moules_frites"),
-                    new DishDto(Long.valueOf(2), "les_13_desserts_de_noel")
+                    new DishDto(null, "moules_frites"),
+                    new DishDto(null, "les_13_desserts_de_noel")
                 )
             )
         );

@@ -1,10 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.cicdlectures.menuserver.controller.MenuControllerIT
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.636 s <<< FAILURE! - in com.cicdlectures.menuserver.controller.MenuControllerIT
-listsAllMenus  Time elapsed: 0.999 s  <<< ERROR!
-org.springframework.dao.InvalidDataAccessApiUsageException: Multiple representations of the same entity [com.cicdlectures.menuserver.model.Dish#1] are being merged. Detached: [Dish(id=1, name=moules_frites, menus=null)]; Detached: [Dish(id=2, name=les_13_desserts_de_noel, menus=null)]; nested exception is java.lang.IllegalStateException: Multiple representations of the same entity [com.cicdlectures.menuserver.model.Dish#1] are being merged. Detached: [Dish(id=1, name=moules_frites, menus=null)]; Detached: [Dish(id=2, name=les_13_desserts_de_noel, menus=null)]
-	at com.cicdlectures.menuserver.controller.MenuControllerIT.listsAllMenus(MenuControllerIT.java:68)
-Caused by: java.lang.IllegalStateException: Multiple representations of the same entity [com.cicdlectures.menuserver.model.Dish#1] are being merged. Detached: [Dish(id=1, name=moules_frites, menus=null)]; Detached: [Dish(id=2, name=les_13_desserts_de_noel, menus=null)]
-	at com.cicdlectures.menuserver.controller.MenuControllerIT.listsAllMenus(MenuControllerIT.java:68)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.162 s <<< FAILURE! - in com.cicdlectures.menuserver.controller.MenuControllerIT
+listsAllMenus  Time elapsed: 1.594 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <MenuDto(id=null, name=menuNoel, dishes=[DishDto(id=null, name=moules_frites), DishDto(id=null, name=les_13_desserts_de_noel)])> but was: <[MenuDto(id=1, name=menuNoel, dishes=[DishDto(id=2, name=les_13_desserts_de_noel), DishDto(id=1, name=moules_frites)])]>
+	at com.cicdlectures.menuserver.controller.MenuControllerIT.listsAllMenus(MenuControllerIT.java:92)
 
