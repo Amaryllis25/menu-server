@@ -42,8 +42,6 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: menu-server
-      - name: Display structure of the download data
-        run: ls -R
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -62,4 +60,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./menu-server.jar
           asset_name: menu-server.jar
-          asset_content_type: application/jar-archive
+          asset_content_type: application/jar
