@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: ListMenuServiceTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.044 s <<< FAILURE! - in ListMenuServiceTests
-listsKnownMenus  Time elapsed: 0.033 s  <<< ERROR!
-java.lang.NullPointerException
-	at ListMenuServiceTests.listsKnownMenus(ListMenuServiceTests.java:23)
-
